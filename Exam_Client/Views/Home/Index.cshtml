@@ -1,0 +1,27 @@
+﻿
+@model IEnumerable<Exam_Client.ServiceReference1.Student>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <table class="table table-striped">
+        <tr>
+            <td>Student ID: </td>
+            <td>First Name: </td>
+            <td>Last Name: </td>
+            <td>Phone Number: </td>
+            <td>Email:</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@item.StudentID</td>
+        <td>@item.FirstName</td>
+        <td>@item.LastName</td>
+        <td>@item.PhoneNumber</td>
+        <td>@item.Email</td>
+    </tr>
+        }
+    </table>
+</div>
